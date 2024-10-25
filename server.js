@@ -18,11 +18,11 @@ app.get("/shoes", (req, res) => {
   let filteredShoes = [...shoes]
 
   // Using if statements to filter shoes based on conditions
-  if (!isNaN(min_price)) {
+  if (min_price) {
     filteredShoes = filteredShoes.filter((shoe) => shoe.price >= min_price)
   }
 
-  if (!isNaN(max_price)) {
+  if (max_price) {
     filteredShoes = filteredShoes.filter((shoe) => shoe.price <= max_price)
   }
 
