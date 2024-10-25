@@ -12,8 +12,8 @@ const shoes = [
 ]
 
 app.get("/shoes", (req, res) => {
-  const min_price = parseFloat(req.query.min_price)
-  const max_price = parseFloat(req.query.max_price)
+  const min_price = (req.query.min_price)
+  const max_price = (req.query.max_price)
   const type = req.query.type
   let filteredShoes = [...shoes]
 
@@ -28,7 +28,7 @@ app.get("/shoes", (req, res) => {
 
   if (type) {
     filteredShoes = filteredShoes.filter(
-      (shoe) => shoe.type.toLowerCase() === type.toLowerCase()
+      (shoe) => shoe.type.toLowerCase() === type
     )
   }
 
